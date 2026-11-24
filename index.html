@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kumari Shail | Data Analyst</title>
+<title>Kumari Shail | Data Analyst Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* GENERAL */
+:root {
+    --pink: #f5cbdc;
+    --lavender: #cbb4e8;
+    --dark: #604b6b;
+    --light: #fff8fb;
+    --muted: #927d9b;
+    --white: #ffffff;
+}
 
 * {
     margin: 0;
@@ -21,20 +26,13 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --lavender: #cbb4e8;
-    --pink: #f4c6d7;
-    --dark: #51435e;
-    --light: #fbf7fc;
-    --mint: #c9e8df;
-    --white: #ffffff;
-}
-
 body {
-    font-family: 'DM Sans', sans-serif;
     background: var(--light);
     color: var(--dark);
-    line-height: 1.7;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
     overflow-x: hidden;
 }
 
@@ -43,26 +41,35 @@ a {
     color: inherit;
 }
 
-/* NAVBAR */
+/* HEADINGS */
+
+h1, h2, h3 {
+    font-family: Algerian, 'Playfair Display', Georgia, serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(251,247,252,0.92);
+    padding: 15px 7%;
+    background: rgba(255,248,251,0.94);
     backdrop-filter: blur(15px);
-    padding: 17px 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee2f3;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0dce9;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: #80649e;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: #9875ad;
 }
 
 nav {
@@ -71,65 +78,68 @@ nav {
 }
 
 nav a {
-    font-size: 13px;
-    transition: 0.3s;
+    font-size: 18px;
+    transition: .3s;
 }
 
 nav a:hover {
-    color: #c17fa7;
+    color: #d18cac;
+    transform: translateY(-2px);
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
     min-height: 85vh;
-    padding: 110px 10%;
-    display: flex;
+    padding: 55px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     position: relative;
+    overflow: hidden;
+
     background:
-    radial-gradient(circle at 15% 20%, #f9dce9 0%, transparent 35%),
-    radial-gradient(circle at 85% 75%, #e4d9f5 0%, transparent 35%),
-    #fbf7fc;
+    radial-gradient(circle at 15% 25%, #f9dce9, transparent 40%),
+    radial-gradient(circle at 80% 70%, #e7dcf7, transparent 40%),
+    #fff8fb;
 }
 
 .hero-content {
-    max-width: 750px;
+    position: relative;
+    z-index: 2;
     animation: fadeUp 1s ease;
 }
 
 .hero-tag {
     display: inline-block;
     background: white;
-    padding: 8px 20px;
+    border: 1px solid #efd5e7;
+    padding: 9px 19px;
     border-radius: 30px;
-    font-size: 13px;
-    color: #a078a7;
-    border: 1px solid #eedbea;
+    color: #a77da9;
     margin-bottom: 25px;
+    font-size: 17px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 7vw, 68px);
-    color: #675176;
+    font-size: clamp(40px, 5vw, 65px);
+    color: #70547d;
     margin-bottom: 12px;
 }
 
 .hero h2 {
-    font-size: 21px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-style: italic;
     color: #b17eaa;
-    font-weight: 500;
     margin-bottom: 20px;
 }
 
 .hero p {
-    max-width: 620px;
-    margin: auto;
-    color: #796e82;
-    font-size: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #806e89;
+    max-width: 550px;
 }
 
 .hero-buttons {
@@ -138,53 +148,80 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    margin: 7px;
+    padding: 13px 25px;
+    margin: 6px;
     border-radius: 30px;
-    background: #cbb4e8;
+    background: #b99bd5;
     color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
     font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .btn:hover {
-    transform: scale(1.07);
-    background: #ae91d1;
-    box-shadow: 0 8px 20px #d9c8e8;
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px #d9c3e9;
 }
 
 .btn-outline {
     background: white;
-    color: #9779b5;
-    border: 1px solid #d9c5ed;
+    color: #9675aa;
+    border: 1px solid #cbb4e8;
 }
 
-/* SAKURA DECORATIONS */
+/* ANIME ILLUSTRATION */
 
-.sakura {
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    height: 570px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 45% 45% 20px 20px;
+    filter: drop-shadow(0 12px 20px rgba(166,120,175,.15));
+    transition: .5s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.035) rotate(1deg);
+}
+
+/* PETALS */
+
+.petal {
     position: absolute;
-    font-size: 30px;
-    opacity: 0.55;
-    animation: float 5s ease-in-out infinite;
     pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+    opacity: .6;
 }
 
-.sakura.one {
+.petal.one {
     top: 15%;
-    left: 9%;
+    left: 5%;
+    font-size: 28px;
 }
 
-.sakura.two {
-    top: 65%;
-    right: 10%;
-    animation-delay: 1s;
-}
-
-.sakura.three {
-    bottom: 12%;
-    left: 17%;
+.petal.two {
+    top: 70%;
+    left: 48%;
+    font-size: 23px;
     animation-delay: 2s;
+}
+
+.petal.three {
+    top: 20%;
+    right: 5%;
+    font-size: 25px;
+    animation-delay: 1s;
 }
 
 /* SECTIONS */
@@ -199,15 +236,13 @@ section {
 }
 
 .section-heading h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 37px;
-    color: #735c87;
+    font-size: 36px;
+    color: #826493;
 }
 
 .section-heading p {
-    color: #a08da9;
-    font-size: 13px;
-    margin-top: 8px;
+    color: #a18da8;
+    font-size: 19px;
 }
 
 /* ABOUT */
@@ -216,115 +251,101 @@ section {
     max-width: 850px;
     margin: auto;
     background: white;
-    padding: 38px;
-    border-radius: 20px;
+    padding: 40px;
+    border-radius: 22px;
     border: 1px solid #f0dce9;
-    box-shadow: 0 8px 30px rgba(170,130,180,0.08);
+    box-shadow: 0 8px 25px rgba(170,130,180,.08);
     text-align: center;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .about-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(170,130,180,0.15);
+    box-shadow: 0 12px 30px rgba(170,130,180,.15);
 }
 
 /* SKILLS */
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
     gap: 22px;
 }
 
 .skill-card {
     background: white;
-    padding: 25px;
-    border-radius: 17px;
-    border: 1px solid #eee1f1;
-    transition: 0.35s;
+    padding: 27px;
+    border-radius: 18px;
+    border: 1px solid #eee0f1;
+    transition: .35s;
 }
 
 .skill-card:hover {
-    transform: translateY(-7px) scale(1.03);
-    border-color: #cbb4e8;
-    box-shadow: 0 10px 25px rgba(180,145,205,0.18);
+    transform: translateY(-8px) scale(1.03);
+    border-color: #c7a9e2;
+    box-shadow: 0 10px 25px rgba(180,145,205,.2);
 }
 
 .skill-card h3 {
-    color: #9a77b4;
-    margin-bottom: 10px;
+    color: #9877b0;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .skill-card p {
-    font-size: 13px;
-    color: #82768a;
+    color: #82738b;
+    font-size: 19px;
 }
 
 /* PROJECTS */
 
 #projects {
-    background: #f8f1fa;
+    background: #f8f0fa;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 25px;
 }
 
 .project-card {
     background: white;
     padding: 28px;
-    border-radius: 19px;
+    border-radius: 20px;
     border: 1px solid #eeddec;
-    transition: 0.35s;
-    position: relative;
-    overflow: hidden;
+    transition: .35s;
 }
 
 .project-card:hover {
     transform: translateY(-8px) scale(1.025);
-    border-color: #c4a5e2;
-    box-shadow: 0 12px 30px rgba(166,130,190,0.17);
+    border-color: #b99bd5;
+    box-shadow: 0 12px 30px rgba(166,130,190,.2);
 }
 
 .project-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-size: 21px;
     color: #806594;
-    font-size: 20px;
     margin-bottom: 12px;
     text-transform: capitalize;
 }
 
 .project-card p {
-    font-size: 13px;
     color: #82768a;
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
 .project-card a {
-    display: inline-block;
     color: #b17eaa;
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 8px;
-}
-
-.project-card a:hover {
-    color: #80649e;
-}
-
-.project-icon {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 #projects-status {
     text-align: center;
     margin-bottom: 25px;
     color: #967fa2;
-    font-size: 13px;
 }
 
 /* EXPERIENCE */
@@ -333,44 +354,40 @@ section {
     max-width: 750px;
     margin: 20px auto;
     background: white;
-    padding: 25px 30px;
+    padding: 27px;
     border-radius: 17px;
     border-left: 4px solid #d9b5d5;
-    box-shadow: 0 5px 20px rgba(170,130,180,0.07);
-    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(170,130,180,.07);
+    transition: .3s;
 }
 
 .experience-card:hover {
-    transform: translateX(6px);
+    transform: translateX(7px);
 }
 
 .experience-card h3 {
     color: #9273aa;
+    font-size: 21px;
 }
 
 /* CONTACT */
 
 .contact {
-    background: linear-gradient(135deg, #f5e8f6, #fbeaf0);
+    background: linear-gradient(135deg,#f5e8f6,#fbeaf0);
     text-align: center;
 }
 
 .contact h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 37px;
+    font-size: 38px;
     color: #765c89;
     margin-bottom: 15px;
 }
 
-.contact p {
-    color: #85758e;
-    margin-bottom: 20px;
-}
-
 .contact a {
+    display: inline-block;
     color: #a475a5;
-    margin: 10px;
-    font-weight: 600;
+    margin: 12px;
+    font-size: 20px;
 }
 
 /* FOOTER */
@@ -380,7 +397,7 @@ footer {
     color: #f8eefa;
     text-align: center;
     padding: 22px;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 /* ANIMATIONS */
@@ -390,24 +407,45 @@ footer {
         opacity: 0;
         transform: translateY(25px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 @keyframes float {
-    0%, 100% {
+    0%,100% {
         transform: translateY(0) rotate(0deg);
     }
-
     50% {
-        transform: translateY(-15px) rotate(10deg);
+        transform: translateY(-15px) rotate(12deg);
     }
 }
 
-@media(max-width: 700px) {
+/* MOBILE */
+
+@media(max-width:850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+        padding: 65px 7%;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .hero-image img {
+        height: 430px;
+        max-width: 430px;
+    }
 
     header {
         flex-direction: column;
@@ -415,48 +453,37 @@ footer {
     }
 
     nav {
-        gap: 13px;
+        gap: 14px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     section {
         padding: 65px 7%;
     }
-
-    .hero {
-        min-height: 75vh;
-        padding: 80px 7%;
-    }
-
-    .about-card {
-        padding: 25px;
-    }
-
 }
 
-@media(prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
+@media(prefers-reduced-motion:reduce) {
+    *,*::before,*::after {
+        animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: .01ms !important;
     }
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">Kumari Shail ♡</div>
+    <div class="logo">🌸 Kumari Shail ♡</div>
 
     <nav>
         <a href="#about">About</a>
@@ -472,40 +499,49 @@ footer {
 
 <div class="hero">
 
-    <span class="sakura one">🌸</span>
-    <span class="sakura two">✿</span>
-    <span class="sakura three">🌷</span>
+    <span class="petal one">🌸</span>
+    <span class="petal two">✿</span>
+    <span class="petal three">🌷</span>
 
     <div class="hero-content">
 
         <div class="hero-tag">
-            Welcome to my little corner of the internet ✨
+            Welcome to my portfolio ♡
         </div>
 
-        <h1>Hi, I'm Kumari Shail ♡</h1>
+        <h1>Kumari Shail</h1>
 
         <h2>Aspiring Data Analyst</h2>
 
         <p>
-            Exploring the world of data, discovering patterns
-            and transforming information into meaningful insights.
+            Turning data into stories, insights into decisions. ✨
 
-            Interested in Financial Analytics, Business Intelligence
-            and Data Visualization.
+            Exploring Financial Analytics, Business Intelligence
+            and Data Visualization through practical projects.
         </p>
 
         <div class="hero-buttons">
 
             <a href="#projects" class="btn">
-                Explore My Work ✨
+                🌸 Explore My Work
             </a>
 
             <a href="https://github.com/KumariShail"
+               target="_blank"
                class="btn btn-outline">
                 GitHub Profile
             </a>
 
         </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="sakura-girl-illustration.png"
+            alt="Anime-inspired Sakura illustration"
+        >
 
     </div>
 
@@ -516,37 +552,33 @@ footer {
 <section id="about">
 
     <div class="section-heading">
-
         <h2>About Me 🌸</h2>
-
         <p>A little introduction about my journey</p>
-
     </div>
 
     <div class="about-card">
 
-        <p>
-            I'm Kumari Shail, a B.Tech Computer Science
-            and Technology student at JIS College of Engineering.
+        I'm Kumari Shail, a B.Tech Computer Science
+        and Technology student at JIS College of Engineering.
 
-            <br><br>
+        <br><br>
 
-            My interest lies in understanding data and
-            discovering the stories hidden within it.
+        My interests lie in Data Analytics, Financial Analytics
+        and Business Intelligence.
 
-            I enjoy working with spreadsheets, databases,
-            analytical tools and interactive dashboards.
+        <br><br>
 
-            <br><br>
+        I enjoy working with spreadsheets, databases,
+        analytical tools and interactive dashboards.
 
-            I am particularly interested in Financial Analytics
-            and Business Intelligence, and I continue to develop
-            my skills through practical projects and learning.
-            
-            <br><br>
+        <br><br>
 
-            Always learning, always curious. ♡
-        </p>
+        I believe in continuous learning and transforming
+        raw information into meaningful insights.
+
+        <br><br>
+
+        Always learning, always curious. ♡
 
     </div>
 
@@ -557,11 +589,8 @@ footer {
 <section id="skills">
 
     <div class="section-heading">
-
         <h2>My Skills 🎀</h2>
-
-        <p>Tools and technologies I'm learning and working with</p>
-
+        <p>Tools and technologies I work with</p>
     </div>
 
     <div class="skills-grid">
@@ -595,14 +624,11 @@ footer {
 <section id="projects">
 
     <div class="section-heading">
-
         <h2>My Projects ✨</h2>
-
-        <p>Things I've created and explored along the way</p>
-
+        <p>A collection of my work and experiments</p>
     </div>
 
-    <p id="projects-status">Loading my GitHub projects... 🌸</p>
+    <p id="projects-status">Loading projects... 🌸</p>
 
     <div class="projects-grid" id="project-list"></div>
 
@@ -613,35 +639,23 @@ footer {
 <section id="experience">
 
     <div class="section-heading">
-
         <h2>Experience & Learning 🌷</h2>
-
         <p>My professional learning journey</p>
-
     </div>
 
     <div class="experience-card">
-
         <h3>AI & Data Analytics</h3>
-
         <p>InAmigos Foundation</p>
-
     </div>
 
     <div class="experience-card">
-
         <h3>Python with AI</h3>
-
         <p>Engineers Without Borders (EWB)</p>
-
     </div>
 
     <div class="experience-card">
-
         <h3>Data Visualization Simulation</h3>
-
         <p>Tata Group – Forage</p>
-
     </div>
 
 </section>
@@ -662,19 +676,17 @@ footer {
        GitHub
     </a>
 
-    <br><br>
+    <br>
 
     <span>Made with curiosity and a little bit of magic 🌸</span>
 
 </section>
 
 <footer>
-
     © 2026 Kumari Shail | Growing one project at a time ♡
-
 </footer>
 
-<!-- AUTOMATIC GITHUB PROJECT FETCHING -->
+<!-- AUTOMATIC GITHUB PROJECTS -->
 
 <script>
 
@@ -700,8 +712,7 @@ async function loadProjects() {
 
         const projects = repositories.filter(repo =>
             !repo.fork &&
-            repo.name.toLowerCase() !==
-            "kumarishail.github.io"
+            repo.name.toLowerCase() !== "kumarishail.github.io"
         );
 
         if (projects.length === 0) {
@@ -711,49 +722,34 @@ async function loadProjects() {
         }
 
         status.textContent =
-            "A collection of my projects and experiments ♡";
+            "Explore my projects and practical work ♡";
 
         projects.forEach(repo => {
 
             const card = document.createElement("div");
-
             card.className = "project-card";
 
-            const icon = document.createElement("div");
-            icon.className = "project-icon";
-            icon.textContent = "🌸";
-
             const title = document.createElement("h3");
-
             title.textContent =
                 repo.name.replace(/[-_]/g, " ");
 
             const description = document.createElement("p");
-
             description.textContent =
                 repo.description ||
-                "Explore this project and its development on GitHub.";
+                "Explore this project on GitHub.";
 
             const language = document.createElement("p");
-
             language.textContent =
                 "Technology: " +
-                (repo.language || "Multiple / Not specified");
+                (repo.language || "Not specified");
 
             const link = document.createElement("a");
-
             link.href = repo.html_url;
             link.target = "_blank";
             link.rel = "noopener noreferrer";
             link.textContent = "Explore Project →";
 
-            card.append(
-                icon,
-                title,
-                description,
-                language,
-                link
-            );
+            card.append(title, description, language, link);
 
             projectList.appendChild(card);
 
@@ -762,7 +758,7 @@ async function loadProjects() {
     } catch (error) {
 
         status.textContent =
-            "Projects couldn't load right now. Visit my GitHub profile instead.";
+            "Projects couldn't load. Visit my GitHub profile instead.";
 
     }
 
