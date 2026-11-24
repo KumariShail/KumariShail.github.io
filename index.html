@@ -142,6 +142,11 @@ nav a:hover {
     max-width: 550px;
 }
 
+.hero-exploring {
+    display: block;
+    margin-left: 1.5em;
+}
+
 .hero-buttons {
     margin-top: 30px;
 }
@@ -442,6 +447,10 @@ footer {
         margin: auto;
     }
 
+    .hero-exploring {
+        margin-left: 0;
+    }
+
     .hero-image img {
         height: 430px;
         max-width: 430px;
@@ -515,9 +524,10 @@ footer {
 
         <p>
             Turning data into stories, insights into decisions. ✨
-
-            Exploring Financial Analytics, Business Intelligence
-            and Data Visualization through practical projects.
+            <span class="hero-exploring">
+                Exploring Financial Analytics, Business Intelligence
+                and Data Visualization through practical projects.
+            </span>
         </p>
 
         <div class="hero-buttons">
@@ -650,7 +660,7 @@ footer {
 
     <div class="experience-card">
         <h3>Python with AI</h3>
-        <p>Engineers Without Borders (EWB)</p>
+        <p>EduTech Private Limited (EWB)</p>
     </div>
 
     <div class="experience-card">
@@ -718,7 +728,7 @@ async function loadProjects() {
         );
 
         // PRIORITY ORDER:
-        // 1. Tata Steel TSPDL Financial Analysis
+        // 1. Tata Steel Financial Analysis
         // 2. AI Data Analyst
         // 3. All remaining projects
 
@@ -727,37 +737,12 @@ async function loadProjects() {
             const name = repo.name.toLowerCase();
             const description = (repo.description || "").toLowerCase();
 
-            // First priority: Tata Steel TSPDL
-
-            const isTataProject =
-                name.includes("tspdl") ||
-                (
-                    name.includes("tata") &&
-                    (
-                        name.includes("steel") ||
-                        name.includes("downstream")
-                    )
-                ) ||
-                (
-                    description.includes("tata steel") &&
-                    (
-                        description.includes("financial") ||
-                        description.includes("tspdl")
-                    )
-                );
-
-            if (isTataProject) {
+            if (name === "tata-steel-financial-analysis") {
                 return 0;
             }
 
-            // Second priority: AI Data Analyst
-
             const isAIAnalyst =
-                (
-                    name.includes("ai") &&
-                    name.includes("data") &&
-                    name.includes("analyst")
-                ) ||
+                name === "ai-data-analyst" ||
                 (
                     description.includes("ai data analyst") ||
                     description.includes("ai-powered data analyst")
@@ -767,17 +752,71 @@ async function loadProjects() {
                 return 1;
             }
 
-            // All remaining repositories
-
             return 2;
         }
 
-        // Sort featured projects first.
-        // Remaining projects retain their GitHub update order.
+        // Featured projects first.
+        // Remaining projects stay in GitHub's update order.
 
         projects.sort((a, b) => {
             return getPriority(a) - getPriority(b);
         });
+
+        // MANUAL TECHNOLOGY MAPPING
+
+        function getTechnology(repo) {
+
+            const name = repo.name.toLowerCase();
+
+            // Tata Steel Financial Analysis
+
+            if (name === "tata-steel-financial-analysis") {
+                return "Microsoft Excel • Power BI";
+            }
+
+            // Hotel Booking Analysis Dashboard
+
+            if (
+                name.includes("hotel") &&
+                name.includes("booking")
+            ) {
+                return "Microsoft Excel";
+            }
+
+            // AI Data Analyst
+
+            if (name === "ai-data-analyst") {
+                return "Python • Streamlit • Plotly • Mistral AI API";
+            }
+
+            // AI Toy Sales Dashboard
+
+            if (name === "ai-toy-sales-dashboard") {
+                return "Python • Pandas • Streamlit • Plotly • Google Gemini";
+            }
+
+            // Netflix Data Analysis
+
+            if (name === "netflix-data-analysis-visualization") {
+                return "Python • Pandas • Matplotlib • Seaborn";
+            }
+
+            // AI Registration Assistant
+
+            if (name === "ai-registration-assistant") {
+                return "Python";
+            }
+
+            // VELoop
+
+            if (name.toLowerCase().includes("veloop")) {
+                return "JavaScript • Node.js • Express • React";
+            }
+
+            // Fallback to GitHub's detected programming language
+
+            return repo.language || "Not specified";
+        }
 
         if (projects.length === 0) {
 
@@ -809,8 +848,7 @@ async function loadProjects() {
             const language = document.createElement("p");
 
             language.textContent =
-                "Technology: " +
-                (repo.language || "Not specified");
+                "Technology: " + getTechnology(repo);
 
             const link = document.createElement("a");
 
