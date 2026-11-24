@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kumari Shail | Data Analyst Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #202b3c;
+    line-height: 1.7;
+}
+
+header {
+    background: #101d35;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #55d6be;
+}
+
+.hero {
+    background: #101d35;
+    color: white;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #55d6be;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #d5deeb;
+}
+
+.button {
+    display: inline-block;
+    margin: 25px 8px 0;
+    padding: 11px 25px;
+    background: #55d6be;
+    color: #101d35;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+section {
+    padding: 65px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #101d35;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.skill-card h3,
+.project-card h3 {
+    color: #17365d;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.project-card a {
+    color: #087e78;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+#projects-status {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #64748b;
+}
+
+.contact {
+    background: #101d35;
+    color: white;
+    text-align: center;
+}
+
+.contact a {
+    color: #55d6be;
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer {
+    background: #0a1426;
+    color: #b8c4d6;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Kumari Shail.</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+
+    <h1>Hi, I'm Kumari Shail</h1>
+
+    <h2>Aspiring Data Analyst</h2>
+
+    <p>
+        B.Tech Computer Science and Technology student
+        interested in Data Analytics, Financial Analysis,
+        Business Intelligence and Data Visualization.
+
+        I enjoy transforming raw data into meaningful
+        insights that support better decisions.
+    </p>
+
+    <a href="#projects" class="button">Explore My Projects</a>
+
+    <a href="https://github.com/KumariShail"
+       class="button">My GitHub</a>
+
+</div>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am Kumari Shail, a Computer Science and
+            Technology student at JIS College of Engineering.
+
+            My interests lie in Data Analytics, Financial
+            Analytics and Business Intelligence.
+
+            I work with Excel, SQL, Python and Power BI
+            to analyse datasets, create dashboards and
+            communicate meaningful findings.
+
+            I am continuously developing my analytical
+            and technical skills through practical projects.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>Programming</h3>
+            <p>Python, SQL</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Data Analysis</h3>
+            <p>Pandas, NumPy</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Visualization</h3>
+            <p>Power BI, Excel, Matplotlib, Seaborn</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <p>Streamlit, Plotly, GitHub</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <p id="projects-status">Loading GitHub projects...</p>
+
+    <div class="projects-container" id="project-list"></div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title" style="color:white;">
+        Let's Connect
+    </h2>
+
+    <p>Interested in Data Analytics opportunities.</p>
+
+    <br>
+
+    <a href="https://github.com/KumariShail">
+        GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/">
+        LinkedIn
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Kumari Shail | Data Analyst Portfolio
+</footer>
+
+<script>
+
+async function loadProjects() {
+
+    const projectList = document.getElementById("project-list");
+    const status = document.getElementById("projects-status");
+
+    try {
+
+        const response = await fetch(
+            "https://api.github.com/users/KumariShail/repos?sort=updated&per_page=100"
+        );
+
+        if (!response.ok) {
+            throw new Error("Unable to load repositories");
+        }
+
+        const repositories = await response.json();
+
+        const projects = repositories.filter(repo =>
+            !repo.fork &&
+            repo.name.toLowerCase() !== "kumarishail.github.io"
+        );
+
+        if (projects.length === 0) {
+            status.textContent = "Projects will appear here soon.";
+            return;
+        }
+
+        status.textContent =
+            "Explore my projects and practical work.";
+
+        projects.forEach(repo => {
+
+            const card = document.createElement("div");
+            card.className = "project-card";
+
+            const title = document.createElement("h3");
+            title.textContent = repo.name.replaceAll("-", " ");
+
+            const description = document.createElement("p");
+            description.textContent =
+                repo.description || "Explore this project on GitHub.";
+
+            const language = document.createElement("p");
+            language.textContent =
+                "Technology: " + (repo.language || "Not specified");
+
+            const link = document.createElement("a");
+            link.href = repo.html_url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "View Project →";
+
+            card.append(title, description, language, link);
+
+            projectList.appendChild(card);
+
+        });
+
+    } catch (error) {
+
+        status.textContent =
+            "Unable to load projects. Please visit my GitHub profile.";
+
+    }
+
+}
+
+loadProjects();
+
+</script>
+
+</body>
+</html>
