@@ -710,14 +710,80 @@ async function loadProjects() {
 
         const repositories = await response.json();
 
+        // Remove forks and the portfolio repository itself
+
         const projects = repositories.filter(repo =>
             !repo.fork &&
             repo.name.toLowerCase() !== "kumarishail.github.io"
         );
 
+        // PRIORITY ORDER:
+        // 1. Tata Steel TSPDL Financial Analysis
+        // 2. AI Data Analyst
+        // 3. All remaining projects
+
+        function getPriority(repo) {
+
+            const name = repo.name.toLowerCase();
+            const description = (repo.description || "").toLowerCase();
+
+            // First priority: Tata Steel TSPDL
+
+            const isTataProject =
+                name.includes("tspdl") ||
+                (
+                    name.includes("tata") &&
+                    (
+                        name.includes("steel") ||
+                        name.includes("downstream")
+                    )
+                ) ||
+                (
+                    description.includes("tata steel") &&
+                    (
+                        description.includes("financial") ||
+                        description.includes("tspdl")
+                    )
+                );
+
+            if (isTataProject) {
+                return 0;
+            }
+
+            // Second priority: AI Data Analyst
+
+            const isAIAnalyst =
+                (
+                    name.includes("ai") &&
+                    name.includes("data") &&
+                    name.includes("analyst")
+                ) ||
+                (
+                    description.includes("ai data analyst") ||
+                    description.includes("ai-powered data analyst")
+                );
+
+            if (isAIAnalyst) {
+                return 1;
+            }
+
+            // All remaining repositories
+
+            return 2;
+        }
+
+        // Sort featured projects first.
+        // Remaining projects retain their GitHub update order.
+
+        projects.sort((a, b) => {
+            return getPriority(a) - getPriority(b);
+        });
+
         if (projects.length === 0) {
+
             status.textContent =
                 "My projects will appear here soon. 🌸";
+
             return;
         }
 
@@ -730,20 +796,24 @@ async function loadProjects() {
             card.className = "project-card";
 
             const title = document.createElement("h3");
+
             title.textContent =
                 repo.name.replace(/[-_]/g, " ");
 
             const description = document.createElement("p");
+
             description.textContent =
                 repo.description ||
                 "Explore this project on GitHub.";
 
             const language = document.createElement("p");
+
             language.textContent =
                 "Technology: " +
                 (repo.language || "Not specified");
 
             const link = document.createElement("a");
+
             link.href = repo.html_url;
             link.target = "_blank";
             link.rel = "noopener noreferrer";
