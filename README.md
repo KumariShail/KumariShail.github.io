@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio!
 
-I'm Kumari Shail, a B.Tech Computer Science and Technology student at JIS College of Engineering, aspiring to build a career in Data Analytics, Financial Analytics, and Business Intelligence.
+I'm Kumari Shail, A B.Tech Computer Science and Technology student at JIS College of Engineering, aspiring to build a career in Data Analytics, Financial Analytics, and Business Intelligence.
 
 This portfolio showcases my projects, technical skills, learning journey, and practical experience in transforming raw data into meaningful insights.
 
@@ -62,8 +62,6 @@ To view this portfolio on your computer:
 
 - GitHub: "KumariShail" (https://github.com/KumariShail)
 - Portfolio: "KumariShail.github.io" (https://KumariShail.github.io)
-
----
 
 Turning data into stories, insights into decisions. ✨
 
