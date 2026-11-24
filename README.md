@@ -1,4 +1,4 @@
-🌸 Kumari Shail | Data Analyst Portfolio
+<h1>🌸 Kumari Shail | Data Analyst Portfolio</h1>
 
 Welcome to my personal portfolio!
 
@@ -6,11 +6,11 @@ I'm Kumari Shail, a B.Tech Computer Science and Technology student at JIS Colleg
 
 This portfolio showcases my projects, technical skills, learning journey, and practical experience in transforming raw data into meaningful insights.
 
-🌷 Live Portfolio
+<h1>🌷 Live Portfolio</h1>
 
 🔗 "Visit My Portfolio" (https://KumariShail.github.io)
 
-✨ About My Portfolio
+<h1>✨ About My Portfolio</h1>
 
 My portfolio highlights:
 
@@ -20,14 +20,14 @@ My portfolio highlights:
 - Experience & Learning: Internship and professional learning experiences.
 - Contact: A way to connect with me.
 
-🛠️ Technologies Used
+<h1>🛠️ Technologies Used</h1>
 
 - HTML5
 - CSS3
 - JavaScript
 - GitHub Pages
 
-📊 Featured Projects
+</h1>📊 Featured Projects</h1>
 
 Some of the projects showcased in my portfolio include:
 
@@ -38,7 +38,7 @@ Some of the projects showcased in my portfolio include:
 
 Visit my portfolio or GitHub repositories to explore my work.
 
-🎀 Design & Features
+<h1>🎀 Design & Features</h1>
 
 - Soft Sakura-inspired pastel theme.
 - Responsive layout for desktop and mobile devices.
@@ -46,7 +46,7 @@ Visit my portfolio or GitHub repositories to explore my work.
 - Dynamically fetched GitHub projects.
 - Dedicated sections for skills, projects, and experience.
 
-🚀 Run Locally
+<h1>🚀 Run Locally</h1>
 
 To view this portfolio on your computer:
 
@@ -58,7 +58,7 @@ To view this portfolio on your computer:
 
 3. Open "index.html" in your browser.
 
-🌸 Connect With Me
+<h1>🌸 Connect With Me</h1>
 
 - GitHub: "KumariShail" (https://github.com/KumariShail)
 - Portfolio: "KumariShail.github.io" (https://KumariShail.github.io)
