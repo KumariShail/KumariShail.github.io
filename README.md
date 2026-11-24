@@ -27,7 +27,7 @@ My portfolio highlights:
 - JavaScript
 - GitHub Pages
 
-</h1>📊 Featured Projects</h1>
+<h1>📊 Featured Projects</h1>
 
 Some of the projects showcased in my portfolio include:
 
